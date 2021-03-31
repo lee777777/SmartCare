@@ -18,22 +18,22 @@ import org.springframework.web.servlet.mvc.SimpleFormController;
  */
 public class LoginController extends SimpleFormController{
     
-        public LoginController()
-           {setCommandClass(User.class);
-            setCommandName("loginUser"); 
-           }
-
-    @Override
-    protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
-        //return super.onSubmit(request, response, command, errors); //To change body of generated methods, choose Tools | Templates.
-    User user=(User)command;
-    ModelAndView modelandview;
-    if(user.getUserName().equals("gcet") && user.getPassword().equals("123456"))
-    {
-        return modelandview=new ModelAndView("main","user",user);
-    } else 
-        return modelandview=new ModelAndView("login","user",user);
-    }
+//        public LoginController()
+//           {setCommandClass(User.class);
+//            setCommandName("loginUser"); 
+//           }
+//
+//    @Override
+//    protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
+//        //return super.onSubmit(request, response, command, errors); //To change body of generated methods, choose Tools | Templates.
+//    User user=(User)command;
+//    ModelAndView modelandview;
+//    if(user.getUserName().equals("gcet") && user.getPassword().equals("123456"))
+//    {
+//        return modelandview=new ModelAndView("main","user",user);
+//    } else 
+//        return modelandview=new ModelAndView("login","user",user);
+//    }
 
     
     }
